@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function performOperations(a, b) {
+          var sumResult = a + b;
+          var differenceResult = a - b;
+          var productResult = a * b;
+          var quotientResult = a / b;
+
+          return [sumResult, differenceResult, productResult, quotientResult];
+        }
+
+        // Example usage
+        var num1 = 10;
+        var num2 = 5;
+
+        var results = performOperations(num1, num2);
+        var resultSum = results[0];
+        var resultDiff = results[1];
+        var resultProd = results[2];
+        var resultQuot = results[3];
+
+        console.log(`Addition: ${resultSum}`, 
+        `Subtraction: ${resultDiff}`, 
+        `Multiplication: ${resultProd}`, 
+        `Division: ${resultQuot}`);
+    </script>
+    
+</body>
+</html>

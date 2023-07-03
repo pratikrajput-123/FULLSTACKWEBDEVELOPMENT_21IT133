@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="salary">Salary:</label>
+        <input type="number" id="salary">
+        <button onClick="addSalary()">Enter</button>
+        <button onClick="minSalary()">Min Salary</button>
+        <button onClick="maxSalary()">Max Salary</button>
+        <br>
+        <div id="min"></div>
+        <div id="max"></div>
+    <SCRIPT>
+        var sal = [];
+
+function addSalary() {
+  var v = document.getElementById("salary").value;
+  sal.push(v);
+  console.log("Salary: " + sal);
+  document.getElementById("salary").focus();
+}
+
+function minSalary() {
+  var minSalary = Math.min(...sal);
+  document.getElementById("min").innerHTML = "Minimum Salary is: " + minSalary;
+  document.getElementById("min").style.opacity = 1;
+}
+
+function maxSalary() {
+  var maxSalary = Math.max(...sal);
+  document.getElementById("max").innerHTML = "Maximum Salary is: " + maxSalary;
+  document.getElementById("max").style.opacity = 1;
+}
+    </SCRIPT>
+</body>
+</html>
